@@ -1,0 +1,19 @@
+{
+  "name": "webp-gulp",
+  "version": "1.0.0",
+  "description": "gulp para convertir imagenes a webp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Gulp",
+    "Webp"
+  ],
+  "author": "swumplurd",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-webp": "^4.0.1"
+  }
+}
