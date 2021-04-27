@@ -1,5 +1,6 @@
 const { src, dest } = require('gulp');
 const webp = require('gulp-webp');
+const imagemin = require('gulp-imagemin');
 
 const path = {
     imagenes: 'input/**/*'
