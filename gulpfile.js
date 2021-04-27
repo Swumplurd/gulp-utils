@@ -14,8 +14,8 @@ function convertWebp() {
 
 function minImages() {
     return src(path.imagenes)
-        .pipe( imagemin() )
-        .pipe( dest( 'output-min/' ));
+        .pipe(imagemin())
+        .pipe(dest('output-min/'));
 }
 
 exports.convertWebp = convertWebp;
