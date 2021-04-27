@@ -8,7 +8,14 @@ const path = {
 function convertWebp() {
     return src(path.imagenes)
         .pipe(webp())
-        .pipe(dest('./output'));
+        .pipe(dest('output-webp/'));
+}
+
+function minImages() {
+    return src(path.imagenes)
+        .pipe( imagemin() )
+        .pipe( dest( 'output-min/' ));
 }
 
 exports.convertWebp = convertWebp;
+exports.minImages = minImages;
