@@ -1,4 +1,4 @@
-# webp-gulp-converter
+# gulp-utils
 
 <img align="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Gulp.js_Logo.svg/800px-Gulp.js_Logo.svg.png" height="150px">
 
