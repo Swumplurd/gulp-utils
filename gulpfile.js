@@ -1,4 +1,4 @@
-const { src, dest } = require('gulp');
+const { src, dest, watch } = require('gulp');
 const webp = require('gulp-webp');
 const imagemin = require('gulp-imagemin');
 
@@ -18,5 +18,11 @@ function minImages() {
         .pipe(dest('output-min/'));
 }
 
+function observer() {
+    watch('input/*.*', convertWebp);
+    watch('input/*.*', minImages);
+}
+
+exports.default = observer;
 exports.convertWebp = convertWebp;
 exports.minImages = minImages;

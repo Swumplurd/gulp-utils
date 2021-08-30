@@ -36,9 +36,9 @@ Terminado el proceso de instalacion de dichos modulos contaremos con dos funcion
 
 *Nota:* Los formatos soportados por gulp-webp son: .png .jpeg .tiff .webp
 
-
-
 2) `gulp minImages` -> Minificara las imagenes contenidas en el directorio `input/` y las alojara en el directorio `output-min/`
+ 
+3) `gulp` -> Para ejecutar todas las tareas y activar el modo `watch`.
 
 ### Mas Informacion
 
