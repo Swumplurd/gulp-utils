@@ -1,28 +1,38 @@
 const { src, dest, watch } = require('gulp');
-const webp = require('gulp-webp');
 const imagemin = require('gulp-imagemin');
+const sass = require('gulp-sass')(require('sass'))
+const webp = require('gulp-webp');
 
 const path = {
-    imagenes: 'input/**/*'
+    img: 'inputs/img/**/*',
+    scss: 'inputs/scss/**/*.scss'
 }
 
-function convertWebp() {
-    return src(path.imagenes)
+function imagesToWebp() {
+    return src(path.img)
         .pipe(webp())
-        .pipe(dest('output-webp/'));
+        .pipe(dest('outputs/img-webp/'));
 }
 
-function minImages() {
-    return src(path.imagenes)
+function imagesToMinify() {
+    return src(path.img)
         .pipe(imagemin())
-        .pipe(dest('output-min/'));
+        .pipe(dest('outputs/img-min/'));
+}
+
+function scssToCss() {
+    return src(path.scss)
+        .pipe(sass())
+        .pipe(dest('outputs/css/'));
 }
 
 function observer() {
-    watch('input/*.*', convertWebp);
-    watch('input/*.*', minImages);
+    watch(path.img, imagesToWebp);
+    watch(path.img, imagesToMinify);
+    watch('inputs/scss/*.*', scssToCss);
 }
 
 exports.default = observer;
-exports.convertWebp = convertWebp;
-exports.minImages = minImages;
+exports.webp = imagesToWebp;
+exports.minify = imagesToMinify;
+exports.scss = scssToCss;
