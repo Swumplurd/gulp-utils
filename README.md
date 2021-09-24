@@ -38,8 +38,12 @@ Terminado el proceso de instalacion de dichos modulos contaremos con dos funcion
 2) `gulp minify` -> Minificara las imagenes contenidas en el directorio `inputs/img` y las alojara en el directorio `outputs/img-min`
  
 3) `gulp scss` -> Compilara los archivos `.scss` contenidos en el directorio `inputs/scss` y alojara el resultado en `outputs/css`
+ 
+4) `gulp xml` -> Convertira los archivos en formato `.xml` contenidos en el directorio `inputs/xml` y alojara el resultado en `outputs/json` con formato `.json
+ 
+5) `gulp csv` -> Convertira los archivos en formato `.csv` contenidos en el directorio `inputs/csv` y alojara el resultado en `outputs/json` con formato `.json
 
-4) `gulp` -> Para ejecutar todas las tareas y activara el modo `watch`.
+6) `gulp` -> Para ejecutar todas las tareas y activara el modo `watch`.
 
 ### Mas Informacion
 
