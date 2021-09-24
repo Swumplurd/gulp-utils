@@ -43,21 +43,27 @@ Terminado el proceso de instalacion de dichos modulos contaremos con dos funcion
  
 5) `gulp csv` -> Convertira los archivos en formato `.csv` contenidos en el directorio `inputs/csv` y alojara el resultado en `outputs/json` con formato `.json
 
-6) `gulp` -> Para ejecutar todas las tareas y activara el modo `watch`.
+6) `gulp replacer` -> Reemplaza una string contenida en uno o mas archivos de texto que deberan alojarse en `inputs/replace-str` con otra string definida por el usuario. Los documentos resultantes se alojaran en `outputs/replaced-str`. Para definir la string a remplazar debemos abrir el archivo `gulpfile.js` y modificar los parametros `string to be replaced` y `string to replace` que se muestran a continuacion:
+    ```js
+    function replaceString() {
+        return src(path.replace)
+            .pipe(replace('string to be replaced', 'string to replace'))
+            .pipe(dest('outputs/replaced-str/'));
+    };
+    ```
+
+7) `gulp` -> Para ejecutar todas las tareas y activara el modo `watch`.
 
 ### Mas Informacion
 
 Para mas informacion visitar:
 
 + [gulp](https://gulpjs.com/)
-+ [sass](https://sass-lang.com/)
 + [gulp-sass](https://www.npmjs.com/package/gulp-sass)
 + [gulp-webp](https://www.npmjs.com/package/gulp-webp)
++ [gulp-replace](https://www.npmjs.com/package/gulp-replace)
++ [gulp-rename](https://www.npmjs.com/package/gulp-rename)
++ [gulp-xml2json](https://www.npmjs.com/package/gulp-xml2json)
++ [gulp-csv2json](https://www.npmjs.com/package/gulp-csv2json)
 + [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin)
 ---
-
-Cualquier duda o sugerencia al contenido del precente repositorio contactame en Discord: Swumplurd#3977
-
-webp
-minify
-scss

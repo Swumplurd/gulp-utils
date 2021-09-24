@@ -42,16 +42,16 @@ function xmlToJson() {
 
 function csvToJson() {
     return src(path.csv)
-    .pipe(csv2json({}))
-    .pipe(rename({extname: '.json'}))
-    .pipe(dest('outputs/json/'));
+        .pipe(csv2json({}))
+        .pipe(rename({extname: '.json'}))
+        .pipe(dest('outputs/json/'));
 }
 
 function replaceString() {
     return src(path.replace)
-      .pipe(replace('string to be replaced', 'string to replace'))
-      .pipe(dest('outputs/replaced-str/'));
-  };
+        .pipe(replace('string to be replaced', 'string to replace'))
+        .pipe(dest('outputs/replaced-str/'));
+};
 
 function observer() {
     watch(path.img, imagesToWebp);
